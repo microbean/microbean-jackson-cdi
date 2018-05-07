@@ -1,0 +1,1 @@
+# microBean Jackson/CDI Integration
