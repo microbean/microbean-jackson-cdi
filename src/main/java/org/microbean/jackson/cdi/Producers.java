@@ -27,17 +27,63 @@ import javax.inject.Inject;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+/**
+ * A package-protected class housing producer methods.
+ *
+ * @author <a href="https://about.me/lairdnelson"
+ * target="_parent">Laird Nelson</a>
+ */
 @ApplicationScoped
 final class Producers {
 
-  private final Event<ObjectMapper> broadcaster;
+
+  /*
+   * Instance fields.
+   */
+
   
+  /**
+   * An {@link Event} broadcaster that fires {@link ObjectMapper}
+   * instances as events during bean production permitting arbitrary
+   * customization by other code.
+   *
+   * <p>This field is never {@code null}.</p>
+   */
+  private final Event<ObjectMapper> broadcaster;
+
+
+  /*
+   * Constructors.
+   */
+
+
+
+  /**
+   * Creates a {@link Producers}.
+   *
+   * @param broadcaster an {@link Event} broadcaster that fires {@link
+   * ObjectMapper} instances as events during bean production
+   * permitting arbitrary customization by other code; may be {@code
+   * null}
+   */
   @Inject
   private Producers(final Event<ObjectMapper> broadcaster) {
     super();
     this.broadcaster = broadcaster;
   }
 
+
+  /*
+   * Instance methods.
+   */
+
+
+  /**
+   * A producer method that produces {@link ObjectMapper} instances in
+   * the {@linkplain ApplicationScoped application scope}.
+   *
+   * @return a new {@link ObjectMapper}; never {@code null}
+   */
   @Produces
   @ApplicationScoped
   private final ObjectMapper produceObjectMapper() {
