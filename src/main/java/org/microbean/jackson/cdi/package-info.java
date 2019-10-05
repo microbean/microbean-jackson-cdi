@@ -17,8 +17,10 @@
 
 /**
  * Provides classes and interfaces for working with <a
- * href="https://github.com/FasterXML/jackson">Jackson</a> from within
- * <a href="http://cdi-spec.org/">CDI</a> environments.
+ * href="https://github.com/FasterXML/jackson"
+ * target="_parent">Jackson</a> from within <a
+ * href="https://jakarta.ee/specifications/cdi/2.0/"
+ * target="_parent">CDI</a> environments.
  *
  * @author <a href="https://about.me/lairdnelson"
  * target="_parent">Laird Nelson</a>

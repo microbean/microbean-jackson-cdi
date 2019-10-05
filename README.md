@@ -1,5 +1,8 @@
 # microBean™ [Jackson](https://github.com/FasterXML/jackson) CDI Integration
 
+[![Build Status](https://travis-ci.com/microbean/microbean-jackson-cdi.svg?branch=master)](https://travis-ci.com/microbean/microbean-jackson-cdi)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.microbean/microbean-jackson-cdi/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.microbean/microbean-jackson-cdi)
+
 The microBean™ Jackson CDI Integration project provides a CDI portable
 extension that allows
 [`ObjectMapper`](https://fasterxml.github.io/jackson-databind/javadoc/2.10/com/fasterxml/jackson/databind/ObjectMapper.html)

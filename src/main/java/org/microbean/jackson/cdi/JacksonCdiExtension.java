@@ -37,10 +37,20 @@ import javax.enterprise.inject.spi.ProcessInjectionPoint;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * An {@link Extension} that permits {@link ObjectMapper} instances to
+ * be injected in CDI-based applications.
+ *
+ * @author <a href="https://about.me/lairdnelson"
+ * target="_parent">Laird Nelson</a>
+ */
 public final class JacksonCdiExtension implements Extension {
 
   private final Set<Set<Annotation>> qualifierSets;
-  
+
+  /**
+   * Creates a new {@link JacksonCdiExtension}.
+   */
   public JacksonCdiExtension() {
     super();
     this.qualifierSets = new HashSet<>();
